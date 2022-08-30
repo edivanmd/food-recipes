@@ -4,7 +4,7 @@ import Home from './Home/Home'
 
 const Pages = () => {
   return (
-    <Container>
+    <Container className='mt-5'>
         <Home />
     </Container>
   )

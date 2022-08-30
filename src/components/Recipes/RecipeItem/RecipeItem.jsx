@@ -3,12 +3,13 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+
+
 const RecipeItem = ({ recipe }) => {
   return (
     <>
-    <Col>
-        {console.log(recipe.id,'uuu')}
-        <Card style={{ width: '18rem' }} key={recipe.id}>
+      <Col sm={6} md={4} lg={3} className='mb-5'>
+        <Card key={recipe.id}>
             <Card.Img variant="top" src={recipe.image} />
             <Card.Body>
                 <Card.Title>{recipe.title}</Card.Title>
@@ -19,7 +20,7 @@ const RecipeItem = ({ recipe }) => {
                 <Button variant="primary">Go somewhere</Button>
             </Card.Body>
         </Card>    
-    </Col>
+      </Col>
     </>
   )
 }
