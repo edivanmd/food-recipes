@@ -17,9 +17,9 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
     <Container>
-      <Navbar.Brand href="#"><h1><Image className='logo' fluid src={logo} alt="My Recipe" /></h1></Navbar.Brand>
+      <h1><Navbar.Brand href="#"><Image className='logo' fluid src={logo} alt="My Recipe" /></Navbar.Brand></h1>
       <Navbar.Toggle aria-controls="navbarScroll" />
-      <Navbar.Collapse id="navbarScroll">
+      <Navbar.Collapse id="navbarScroll" className="flex-grow-0">
         <Nav className="me-auto my-2 my-lg-0 justify-content-end" navbarScroll >
           <NavDropdown title="Diet" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">Dairy free</NavDropdown.Item>
@@ -29,10 +29,10 @@ const NavBar = () => {
           </NavDropdown>
 
           <NavDropdown title="Allergies" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Glutten</NavDropdown.Item>
+            <NavDropdown.Item href="#action3">Gluten</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Legumes</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Grain</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Fruite</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Fruit</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown title="Cuisine" id="navbarScrollingDropdown">

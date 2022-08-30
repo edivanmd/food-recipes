@@ -12,7 +12,7 @@ function Sliders() {
             <Carousel.Caption>
             <h3>{SliderData.title}</h3>
             <p>{SliderData.description}</p>
-            <a href={SliderData.link} class="btn btn-outline-success">More</a>
+            <a href={SliderData.link} className="btn btn-outline-success">More</a>
 
             </Carousel.Caption>
         </Carousel.Item>

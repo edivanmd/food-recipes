@@ -1,7 +1,14 @@
 .logo{
     max-width: 100px!important;
 }
+.nav-link {
+    font-weight: 400!important;
+}
 
 .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.navbar-collapse{
+    gap: 3.5rem;
 }
