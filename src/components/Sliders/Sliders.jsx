@@ -1,14 +1,29 @@
+import { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
+import Image from 'react-bootstrap/Image'
 import SlidersData from './SlidersData';
 
 import './sliders.css';
 
 function Sliders() {
+
+  // const [popularSlider, setPopularSlider] = useState([]);
+
+  // useEffect(() => {
+  //   getPopular();
+  // }, []);
+  
+  // const getPopular = () => {
+  //   const recipes = localStorage.getItem('popular');
+  //   setPopularSlider(JSON.parse(recipes).slice(0,3));
+  //   // console.log(popularSlider)
+  // }
+
   return (
     <Carousel>
       {SlidersData.map((SliderData) => (
         <Carousel.Item key={SliderData.id}>
-            <img className="d-block w-100" src={SliderData.image} alt="slide"/>
+            <Image className="d-block w-100" src={SliderData.image} alt="slide"/>
             <Carousel.Caption>
             <h3>{SliderData.title}</h3>
             <p>{SliderData.description}</p>

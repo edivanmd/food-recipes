@@ -1,10 +1,11 @@
 import React from 'react';
-import { Vegetarian, Popular } from '../../components';
+import { Popular, Vegetarian } from '../../components';
 
 
 const Home = () => {
   return (
     <>
+      <Vegetarian />
       <Popular />
     </>
   )

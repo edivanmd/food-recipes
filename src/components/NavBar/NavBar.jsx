@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -17,10 +18,12 @@ const NavBar = () => {
   return (
     <Navbar bg="light" expand="lg">
     <Container>
-      <h1><Navbar.Brand href="#"><Image className='logo' fluid src={logo} alt="My Recipe" /></Navbar.Brand></h1>
+      <h1><Navbar.Brand as={NavLink} to={'/'}><Image className='logo' fluid src={logo} alt="My Recipe" /></Navbar.Brand></h1>
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll" className="flex-grow-0">
         <Nav className="me-auto my-2 my-lg-0 justify-content-end" navbarScroll >
+          <Nav.Link as={NavLink} to={'/popular'}>Popular</Nav.Link>
+          <Nav.Link as={NavLink} to={'/vegetarian'}>Vegetarian</Nav.Link>
           <NavDropdown title="Diet" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">Dairy free</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Egg free</NavDropdown.Item>
@@ -36,10 +39,10 @@ const NavBar = () => {
           </NavDropdown>
 
           <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Asian</NavDropdown.Item>
+            <NavDropdown.Item href="#action3">Brazilian</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Italian</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Chinese</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">French</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">American</NavDropdown.Item>
+            <NavDropdown.Item href="#action4">Thai</NavDropdown.Item>
           </NavDropdown>
 
         </Nav>
