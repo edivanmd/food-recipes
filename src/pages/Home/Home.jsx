@@ -1,5 +1,5 @@
 import React from 'react';
-import { Popular, Vegetarian } from '../../components';
+import { Popular, Vegetarian, Cuisine } from '../../components';
 
 
 const Home = () => {

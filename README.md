@@ -5,6 +5,7 @@ React \
 JavaScript \
 Bootstrap 5 \
 Spoonacular API \
+Framer Motion
 
 
 
