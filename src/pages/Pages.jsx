@@ -1,8 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/esm/Container';
 import { Route, Routes } from 'react-router-dom';
-import Home from './Home/Home'
-import { Cuisine, Popular, Vegetarian} from '../components';
+import { Home, Cuisine, Popular, Vegetarian, Searched } from './';
 
 
 
@@ -14,6 +13,7 @@ const Pages = () => {
           <Route path='/cuisine/:idParam' element={<Cuisine />} />
           <Route path='/popular' element={<Popular />} />
           <Route path='/vegetarian' element={<Vegetarian />} />
+          <Route path='/searched/:idSearch' element={<Searched />} />
       </Routes>
     </Container>
   )

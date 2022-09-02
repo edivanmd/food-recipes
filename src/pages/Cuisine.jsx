@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom' 
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
-import RecipeItem from "./RecipeItem/RecipeItem";
+import { RecipeItem } from "../components";
 import { motion } from 'framer-motion';
 
 const Cuisine = () => {

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
-import RecipeItem from "./RecipeItem/RecipeItem";
-import AlertMessage from './AlertMessage';
+import { RecipeItem, AlertMessage } from "../components";
 
 
 // const popular = [

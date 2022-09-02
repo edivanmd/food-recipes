@@ -6,10 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
-
+// import Search from '../Search/Search';
 import logo from '../../assets/logo.png';
 
 import './navbar.css'
@@ -24,6 +22,14 @@ const NavBar = () => {
         <Nav className="me-auto my-2 my-lg-0 justify-content-end" navbarScroll >
           <Nav.Link as={NavLink} to='/popular'>Popular</Nav.Link>
           <Nav.Link as={NavLink} to='/vegetarian'>Vegetarian</Nav.Link>
+          
+          <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
+            <NavDropdown.Item as={NavLink} to='/cuisine/Latin American'>Latin America</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/cuisine/Italian'>Italian</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/cuisine/French'>French</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/cuisine/Thai'>Thai</NavDropdown.Item>
+          </NavDropdown>
+
           <NavDropdown title="Diet" id="navbarScrollingDropdown">
             <NavDropdown.Item href="#action3">Dairy free</NavDropdown.Item>
             <NavDropdown.Item href="#action4">Egg free</NavDropdown.Item>
@@ -38,23 +44,9 @@ const NavBar = () => {
             <NavDropdown.Item href="#action4">Fruit</NavDropdown.Item>
           </NavDropdown>
 
-          <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
-            <NavDropdown.Item as={NavLink} to='/cuisine/Latin American'>Latin America</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to='/cuisine/Italian'>Italian</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to='/cuisine/French'>French</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to='/cuisine/Thai'>Thai</NavDropdown.Item>
-          </NavDropdown>
 
         </Nav>
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Search"
-            className="me-2"
-            aria-label="Search"
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form>
+        {/* <Search /> */}
       </Navbar.Collapse>
     </Container>
   </Navbar>
