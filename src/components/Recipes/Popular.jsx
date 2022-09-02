@@ -96,7 +96,7 @@ const Popular = () => {
             <h2>Popular Recipes</h2>
             <Row>
               {popular.map((recipe) => (
-                <RecipeItem recipe={recipe} key={recipe.id}/>
+                <RecipeItem recipe={recipe} key={recipe.id} hasLink={true}/>
               ))}
             </Row>
           </Container>

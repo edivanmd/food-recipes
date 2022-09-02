@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
-const RecipeItem = ({ recipe }) => {
+const RecipeItem = ({ recipe, hasLink }) => {
   return (
     <>
       <Col sm={6} md={4} lg={3} className='mb-4 d-flex align-items-stretch'>
@@ -14,7 +14,7 @@ const RecipeItem = ({ recipe }) => {
             <Card.Img variant='top' src={recipe.image} />
             <Card.Body className='d-flex flex-column justify-content-between'>
                 <Card.Title>{recipe.title}</Card.Title>
-                <Button as={Link} to={recipe.spoonacularSourceUrl} size='sm' variant='success'>More</Button>
+                { hasLink && <Button as={Link} to={recipe.spoonacularSourceUrl} size='sm' variant='success'>More</Button>}
             </Card.Body>
         </Card>    
       </Col>

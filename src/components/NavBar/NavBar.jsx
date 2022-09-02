@@ -41,7 +41,7 @@ const NavBar = () => {
           <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
             <NavDropdown.Item as={NavLink} to='/cuisine/Latin American'>Latin America</NavDropdown.Item>
             <NavDropdown.Item as={NavLink} to='/cuisine/Italian'>Italian</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to='/cuisine/French'>American</NavDropdown.Item>
+            <NavDropdown.Item as={NavLink} to='/cuisine/French'>French</NavDropdown.Item>
             <NavDropdown.Item as={NavLink} to='/cuisine/Thai'>Thai</NavDropdown.Item>
           </NavDropdown>
 
