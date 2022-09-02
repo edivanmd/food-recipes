@@ -9,8 +9,8 @@ const InternalBanner = ({ title, image }) => {
 
 
   return (
-    <Container>
-      <Row style={{backgroundImage: `url(${image})`}} className='internalBanner'>
+    <Container style={{backgroundImage: `url(${image})`}} className='internalBanner'>
+      <Row>
         <h2>{title}</h2>
       </Row>
     </Container>
