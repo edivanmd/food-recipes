@@ -5,7 +5,7 @@ import { Sliders } from '../'
 const Header = () => {
   return (
     <div>
-        <NavBar /> 
+        {/* <NavBar />  */}
         <Sliders />   
     </div>
   )

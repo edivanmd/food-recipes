@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
-import { RecipeItem, AlertMessage } from "../components";
+import { RecipeItem, AlertMessage, InternalBanner } from "../components";
+
+import ImageBanner from '../assets/banner_internal_popular.jpeg';
 
 
 // const popular = [
 //   {
-//     id: 1,
 //     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Greek Salad",
-//     description: "Awesome salad.",
-//     link: "#"
+//     title: "Popular"
 //   },
 //   {
 //     id: 2,
@@ -92,6 +91,7 @@ const Popular = () => {
         isError 
         ? <AlertMessage />
         : <Container>
+            <InternalBanner title='Popular' image={ImageBanner} />
             <h2>Popular Recipes</h2>
             <Row>
               {popular.map((recipe) => (

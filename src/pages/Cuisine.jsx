@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom' 
 import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
-import { RecipeItem } from "../components";
+import { RecipeItem, InternalBanner } from "../components";
 import { motion } from 'framer-motion';
 
 const Cuisine = () => {
@@ -38,6 +38,7 @@ const Cuisine = () => {
 
   return (
     <Container>
+
       <h2>{idParam} Cuisine</h2>
       <Row>
         {cuisine.map((recipe) => (
