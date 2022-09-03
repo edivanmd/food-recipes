@@ -91,7 +91,7 @@ const Popular = () => {
         isError 
         ? <AlertMessage />
         : <Container>
-            <InternalBanner title='Popular' image={ImageBanner} />
+            <InternalBanner title='Popular Cuisine' image={ImageBanner} />
             <h2>Popular Recipes</h2>
             <Row>
               {popular.map((recipe) => (
