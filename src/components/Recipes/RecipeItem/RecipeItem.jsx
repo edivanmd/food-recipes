@@ -14,7 +14,7 @@ const RecipeItem = ({ recipe, hasLink }) => {
             <Card.Img variant='top' src={recipe.image} />
             <Card.Body className='d-flex flex-column justify-content-between'>
                 <Card.Title>{recipe.title}</Card.Title>
-                { hasLink && <Button as={Link} to={recipe.spoonacularSourceUrl} size='sm' variant='success'>More</Button>}
+                { hasLink && <Button as={Link} to={'/recipe-details/' + recipe.id + '/' + recipe.title.replace(/ /g, '-')} size='sm' variant='success'>More</Button>}
             </Card.Body>
         </Card>    
       </Col>

@@ -1,64 +1,13 @@
 import { useEffect, useState } from "react";
-import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
+import { useLocation } from "react-router-dom";
 import { RecipeItem, AlertMessage, InternalBanner } from "../components";
-
-import ImageBanner from '../assets/banner_internal_popular.jpeg';
-
-
-// const popular = [
-//   {
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Popular"
-//   },
-//   {
-//     id: 2,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   },
-//   {
-//     id: 3,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   },
-//   {
-//     id: 4,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   },
-//   {
-//     id: 5,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   },
-//   {
-//     id: 6,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   },
-//   {
-//     id: 7,
-//     image: 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg',
-//     title: "Fish and Chips",
-//     description: "Delicious recipe.",
-//     link: "#"
-//   }
-// ]
 
 const Popular = () => {
 
   const [popular, setPopular] = useState([]);
   const [isError, setIsError] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     getPopular();
@@ -90,15 +39,17 @@ const Popular = () => {
       {
         isError 
         ? <AlertMessage />
-        : <Container>
-            <InternalBanner title='Popular Cuisine' image={ImageBanner} />
+        : <div className="popular">
+            { 
+              location.pathname === '/popular' && <InternalBanner title='Popular' />
+            }
             <h2>Popular Recipes</h2>
             <Row>
               {popular.map((recipe) => (
                 <RecipeItem recipe={recipe} key={recipe.id} hasLink={true}/>
               ))}
             </Row>
-          </Container>
+          </div>
       }
     </>
   )

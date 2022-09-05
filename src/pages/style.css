@@ -1,0 +1,31 @@
+.popular .internalBanner{
+    background-image: url(../assets/banner_internal_popular.jpeg);
+}
+
+.vegetarian .internalBanner{
+    background-image: url(../assets/banner_internal_vegetarian.jpeg);
+}
+
+.LatinAmerican .internalBanner{
+    background-image: url(../assets/banner_internal_latin-american.jpeg);
+}
+
+.Italian .internalBanner{
+    background-image: url(../assets/banner_internal_italian.jpeg);
+}
+
+.French .internalBanner{
+    background-image: url(../assets/banner_internal_french.jpeg);
+}
+
+.Thai .internalBanner{
+    background-image: url(../assets/banner_internal_thai.jpeg);
+}
+
+.searched .internalBanner{
+    background-image: url(../assets/banner_internal_searched.jpeg);
+}
+
+.recipeDetails .internalBanner{
+    background-image: url(../assets/banner_internal_recipe_details.jpeg);
+}

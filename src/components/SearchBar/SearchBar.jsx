@@ -2,14 +2,22 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
 
-    const [text, setInput] = useState([]);
+    const [input, setInput] = useState("");
+    const navigate = useNavigate();
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        navigate('/searched/' + input)
+
+    }
 
     return (
-        <Container sticky="top">
-            <Form className="d-flex mt-4">
+        <Container>
+            <Form onSubmit={submitHandler} className="d-flex m-5">
                 <Form.Control
                 type="search"
                 placeholder="More Recipes"
@@ -17,7 +25,7 @@ const SearchBar = () => {
                 aria-label="Search"
                 onChange={(e) => setInput(e.target.value)}
                 />
-                <Button variant="outline-success">Search</Button>
+                <Button variant="outline-success" onClick={submitHandler}>Search</Button>
             </Form>
         </Container>
     )

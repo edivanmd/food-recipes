@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sliders } from '../components';
+import { SearchBar, Sliders } from '../components';
 import { Popular, Vegetarian } from './';
 
 
@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <>
       <Sliders />   
+      <SearchBar />
       <Vegetarian />
       <Popular />
     </>

@@ -20,8 +20,6 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="navbarScroll" />
       <Navbar.Collapse id="navbarScroll" className="flex-grow-0">
         <Nav className="me-auto my-2 my-lg-0 justify-content-end" navbarScroll >
-          <Nav.Link as={NavLink} to='/popular'>Popular</Nav.Link>
-          <Nav.Link as={NavLink} to='/vegetarian'>Vegetarian</Nav.Link>
           
           <NavDropdown title="Cuisine" id="navbarScrollingDropdown">
             <NavDropdown.Item as={NavLink} to='/cuisine/Latin American'>Latin America</NavDropdown.Item>
@@ -30,23 +28,11 @@ const NavBar = () => {
             <NavDropdown.Item as={NavLink} to='/cuisine/Thai'>Thai</NavDropdown.Item>
           </NavDropdown>
 
-          <NavDropdown title="Diet" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Dairy free</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Egg free</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Sugar free</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Gluten free</NavDropdown.Item>
-          </NavDropdown>
-
-          <NavDropdown title="Allergies" id="navbarScrollingDropdown">
-            <NavDropdown.Item href="#action3">Gluten</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Legumes</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Grain</NavDropdown.Item>
-            <NavDropdown.Item href="#action4">Fruit</NavDropdown.Item>
-          </NavDropdown>
-
+          <Nav.Link as={NavLink} to='/popular'>Popular</Nav.Link>
+          <Nav.Link as={NavLink} to='/vegetarian'>Vegetarian</Nav.Link>
 
         </Nav>
-        {/* <Search /> */}
+        {/* <SearchBar /> */}
       </Navbar.Collapse>
     </Container>
   </Navbar>

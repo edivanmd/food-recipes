@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import Container from "react-bootstrap/esm/Container";
 import Row from 'react-bootstrap/Row';
-import { RecipeItem, AlertMessage } from "../components";
+import { useLocation } from "react-router-dom";
+import { RecipeItem, AlertMessage, InternalBanner } from "../components";
 
 const Vegetarian = () => {
   const [vegetarian, setVegetarian] = useState([]);
   const [isError, setIsError] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     getVegetarian();
@@ -24,7 +25,6 @@ const Vegetarian = () => {
       if( data.status === 'failure' ) {
          setIsError(true)
       } else {
-       console.log(data)
          setVegetarian(data.recipes);
       }
     }
@@ -36,14 +36,17 @@ const Vegetarian = () => {
       {
         isError 
         ? <AlertMessage />
-        : <Container>
+        : <div className="vegetarian">
+            { 
+              location.pathname === '/vegetarian' && <InternalBanner title='Vegetarian' />
+            }
             <h2>Vegetarian Recipes</h2>
             <Row>
               {vegetarian.map((recipe) => (
-                <RecipeItem recipe={recipe} key={recipe.id}/>
+                <RecipeItem recipe={recipe} key={recipe.id} hasLink={true}/>
               ))}
             </Row>
-          </Container>
+          </div>
       }
     </>
   )

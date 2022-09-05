@@ -5,11 +5,11 @@ import Row from 'react-bootstrap/Row';
 import './style.css';
 
 
-const InternalBanner = ({ title, image }) => {
+const InternalBanner = ({ title }) => {
 
 
   return (
-    <Container style={{backgroundImage: `url(${image})`}} className='internalBanner'>
+    <Container className='internalBanner'>
       <Row>
         <h2>{title}</h2>
       </Row>
