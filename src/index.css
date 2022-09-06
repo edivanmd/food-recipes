@@ -8,7 +8,8 @@
   --color-white: #FFFFFF;
   --color-golden: #DCCA87;
   --color-gray: #AAAAAA;
-  --color-black: #000000
+  --color-black: #000000;
+  --color-green: #28a745;
 }
 
 * {

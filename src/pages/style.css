@@ -29,3 +29,12 @@
 .recipeDetails .internalBanner{
     background-image: url(../assets/banner_internal_recipe_details.jpeg);
 }
+
+
+.recipeDetails .col a {
+    color:var(--color-green);
+    text-decoration: none;
+}
+.recipeDetails .col a:hover {
+    text-decoration: underline;
+}

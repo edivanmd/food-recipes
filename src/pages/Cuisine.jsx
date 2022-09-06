@@ -33,7 +33,7 @@ const Cuisine = () => {
       <h2>{idParam} Cuisine</h2>
       <Row>
         {cuisine.map((recipe) => (
-          <RecipeItem recipe={recipe} key={recipe.id} hasLink={false}/>
+          <RecipeItem recipe={recipe} key={recipe.id} hasLink={true}/>
         ))}
       </Row>
     </div>
