@@ -28,7 +28,13 @@ const Cuisine = () => {
   }
 
   return (
-    <div className={idParam.replace(/ /g, '')}>
+    <motion.div 
+      className={idParam.replace(/ /g, '')}
+      animate={{opacity: 1}}
+      initial={{opacity:0}}
+      exit={{opacity:0}}
+      duration={{duration:2}}
+    >
       <InternalBanner title={idParam} />
       <h2>{idParam} Cuisine</h2>
       <Row>
@@ -36,7 +42,7 @@ const Cuisine = () => {
           <RecipeItem recipe={recipe} key={recipe.id} hasLink={true}/>
         ))}
       </Row>
-    </div>
+    </motion.div>
   )
 }
 

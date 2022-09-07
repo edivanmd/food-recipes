@@ -2,18 +2,14 @@ import {Banner01, Banner02} from './imports';
 
 const SlidersData = [
     {
-      id: 1,
+      id: 716301,
       image: Banner01,
-      title: "Greek Salad",
-      description: "Awesome salad.",
-      link: "#"
+      title: "Honey Ginger Lemon Iced Tea"
     },
     {
-      id: 2,
+      id: 716245,
       image: Banner02,
-      title: "Fish and Chips",
-      description: "Delicious recipe.",
-      link: "#"
+      title: "Avocado Egg Salad"
     }
   ]
 

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
 import Image from 'react-bootstrap/Image'
 import SlidersData from './SlidersData';
 
 import './sliders.css';
+import { Button } from "react-bootstrap";
 
 function Sliders() {
 
@@ -26,9 +28,7 @@ function Sliders() {
             <Image className="d-block w-100" src={SliderData.image} alt="slide"/>
             <Carousel.Caption>
             <h3>{SliderData.title}</h3>
-            <p>{SliderData.description}</p>
-            <a href={SliderData.link} className="btn btn-outline-success">More</a>
-
+            <Button as={Link} to={'/recipe-details/' + SliderData.id + '/' + SliderData.title.replace(/ /g, '-')} className="btn btn-success">More</Button>
             </Carousel.Caption>
         </Carousel.Item>
       ))};

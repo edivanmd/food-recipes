@@ -21,16 +21,22 @@ const Searched = () => {
 
 
   return (
-    <div className='searched'>
+    <motion.div
+      className='searched'
+      animate={{opacity: 1}}
+      initial={{opacity:0}}
+      exit={{opacity:0}}
+      duration={{duration:0.5}}
+    > 
       <InternalBanner title='Searched' />
       <SearchBar />
       <h2>Results for {idSearched}</h2>
       <Row>
         {searchedRecipes.map((recipe) => (
-          <RecipeItem recipe={recipe} key={recipe.id} hasLink={false}/>
+          <RecipeItem recipe={recipe} key={recipe.id}/>
         ))}
       </Row>
-    </div>
+    </motion.div>
   )
 }
 

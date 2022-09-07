@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import Row from 'react-bootstrap/Row';
 import { useLocation } from "react-router-dom";
-import { RecipeItem, AlertMessage, InternalBanner } from "../components";
+import { RecipeItem, AlertMessage, InternalBanner } from "../components"
+import { motion } from "framer-motion";
 
 const Vegetarian = () => {
   const [vegetarian, setVegetarian] = useState([]);
@@ -20,19 +21,24 @@ const Vegetarian = () => {
     } else {
       const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=5&tags=vegetarian`);
       const data = await api.json();
-      localStorage.setItem('vegetarian', JSON.stringify(data.recipes));
 
       if( data.status === 'failure' ) {
          setIsError(true)
       } else {
-         setVegetarian(data.recipes);
+        localStorage.setItem('vegetarian', JSON.stringify(data.recipes));
+        setVegetarian(data.recipes);
       }
     }
 
   }
 
   return (
-    <>
+    <motion.div
+      animate={{opacity: 1}}
+      initial={{opacity:0}}
+      exit={{opacity:0}}
+      duration={{duration:2}}
+    >
       {
         isError 
         ? <AlertMessage />
@@ -48,7 +54,7 @@ const Vegetarian = () => {
             </Row>
           </div>
       }
-    </>
+    </motion.div>
   )
 }
 
